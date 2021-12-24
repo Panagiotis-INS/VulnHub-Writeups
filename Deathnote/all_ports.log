@@ -1,0 +1,9 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-12-17 17:18 EET
+Nmap scan report for deathnote (192.168.1.60)
+Host is up (0.00045s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap done: 1 IP address (1 host up) scanned in 3.25 seconds

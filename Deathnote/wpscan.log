@@ -1,0 +1,119 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.15
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[34m[i][0m It seems like you have not updated the database for some time.
+[?] Do you want to update now? [Y]es [N]o, default: [N][32m[+][0m URL: http://deathnote.vuln/wordpress/ [192.168.1.60]
+[32m[+][0m Started: Fri Dec 17 17:56:15 2021
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entry: Server: Apache/2.4.38 (Debian)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: http://deathnote.vuln/wordpress/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m WordPress readme found: http://deathnote.vuln/wordpress/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m Upload directory has listing enabled: http://deathnote.vuln/wordpress/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: http://deathnote.vuln/wordpress/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+
+Fingerprinting the version -: |======================================================================================================================|
+[34m[i][0m The WordPress version could not be detected.
+
+[32m[+][0m WordPress theme in use: twentytwentyone
+ | Location: http://deathnote.vuln/wordpress/wp-content/themes/twentytwentyone/
+ | Latest Version: 1.3 (up to date)
+ | Last Updated: 2021-04-27T00:00:00.000Z
+ | Readme: http://deathnote.vuln/wordpress/wp-content/themes/twentytwentyone/readme.txt
+ | Style URL: http://deathnote.vuln/wordpress/wp-content/themes/twentytwentyone/style.css?ver=1.3
+ | Style Name: Twenty Twenty-One
+ | Style URI: https://wordpress.org/themes/twentytwentyone/
+ | Description: Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. Wi...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.3 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - http://deathnote.vuln/wordpress/wp-content/themes/twentytwentyone/style.css?ver=1.3, Match: 'Version: 1.3'
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+
+[34m[i][0m No plugins Found.
+
+[32m[+][0m Performing password attack on Xmlrpc against 86771 user/s
+
+Progress: |
+[34m[i][0m No Valid Passwords Found.
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Fri Dec 17 17:57:40 2021
+[32m[+][0m Requests Done: 3880
+[32m[+][0m Cached Requests: 222
+[32m[+][0m Data Sent: 1.826 MB
+[32m[+][0m Data Received: 10.751 MB
+[32m[+][0m Memory used: 243.93 MB
+[32m[+][0m Elapsed time: 00:01:25
+
+Scan Aborted: invalid byte sequence in UTF-8
+Trace: /usr/lib/ruby/vendor_ruby/xmlrpc/create.rb:51:in `gsub!'
+/usr/lib/ruby/vendor_ruby/xmlrpc/create.rb:51:in `text'
+/usr/lib/ruby/vendor_ruby/xmlrpc/create.rb:21:in `tag'
+/usr/lib/ruby/vendor_ruby/xmlrpc/create.rb:197:in `conv2value'
+/usr/lib/ruby/vendor_ruby/xmlrpc/create.rb:119:in `block in methodCall'
+/usr/lib/ruby/vendor_ruby/xmlrpc/create.rb:118:in `collect'
+/usr/lib/ruby/vendor_ruby/xmlrpc/create.rb:118:in `methodCall'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/app/models/xml_rpc.rb:48:in `method_call'
+/usr/share/rubygems-integration/all/gems/wpscan-3.8.15/app/finders/passwords/xml_rpc.rb:11:in `login_request'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/finders/finder/breadth_first_dictionary_attack.rb:39:in `block (2 levels) in attack'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/finders/finder/breadth_first_dictionary_attack.rb:38:in `each'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/finders/finder/breadth_first_dictionary_attack.rb:38:in `block in attack'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/finders/finder/breadth_first_dictionary_attack.rb:33:in `foreach'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/finders/finder/breadth_first_dictionary_attack.rb:33:in `attack'
+/usr/share/rubygems-integration/all/gems/wpscan-3.8.15/app/controllers/password_attack.rb:45:in `run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/controllers.rb:50:in `each'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/controllers.rb:50:in `block in run'
+/usr/lib/ruby/2.7.0/timeout.rb:78:in `timeout'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/controllers.rb:45:in `run'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/scan.rb:24:in `run'
+/usr/share/rubygems-integration/all/gems/wpscan-3.8.15/bin/wpscan:17:in `block in <top (required)>'
+/usr/share/rubygems-integration/all/gems/cms_scanner-0.13.1/lib/cms_scanner/scan.rb:15:in `initialize'
+/usr/share/rubygems-integration/all/gems/wpscan-3.8.15/bin/wpscan:6:in `new'
+/usr/share/rubygems-integration/all/gems/wpscan-3.8.15/bin/wpscan:6:in `<top (required)>'
+/usr/bin/wpscan:23:in `load'
+/usr/bin/wpscan:23:in `<main>'
