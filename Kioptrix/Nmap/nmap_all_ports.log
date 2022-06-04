@@ -1,0 +1,13 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-04 15:17 EEST
+Nmap scan report for nonexistent.corp (192.168.1.20)
+Host is up (0.0066s latency).
+Not shown: 65529 closed ports
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+111/tcp   open  rpcbind
+139/tcp   open  netbios-ssn
+443/tcp   open  https
+32768/tcp open  filenet-tms
+
+Nmap done: 1 IP address (1 host up) scanned in 11.12 seconds

@@ -1,0 +1,12 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2022-06-04 15:18 EEST
+Nmap scan report for nonexistent.corp (192.168.1.20)
+Host is up (0.00071s latency).
+Not shown: 996 closed ports
+PORT      STATE         SERVICE
+111/udp   open|filtered rpcbind
+137/udp   open|filtered netbios-ns
+138/udp   open|filtered netbios-dgm
+32768/udp open|filtered omad
+MAC Address: 08:00:27:61:9E:87 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 1095.75 seconds
