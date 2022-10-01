@@ -1,0 +1,10 @@
+# Nmap 7.92 scan initiated Sat Oct  1 21:40:50 2022 as: nmap -sU -oN ./Nmap/UDP-scan.nmap 192.168.1.27
+Nmap scan report for 192.168.1.27 (192.168.1.27)
+Host is up (0.00025s latency).
+Not shown: 998 closed udp ports (port-unreach)
+PORT    STATE         SERVICE
+68/udp  open|filtered dhcpc
+111/udp open          rpcbind
+MAC Address: 08:00:27:1A:3D:66 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Sat Oct  1 21:57:39 2022 -- 1 IP address (1 host up) scanned in 1009.03 seconds

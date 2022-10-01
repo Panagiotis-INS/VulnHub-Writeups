@@ -1,0 +1,11 @@
+# Nmap 7.92 scan initiated Sat Oct  1 21:38:02 2022 as: nmap -p- -oN ./Nmap/all_ports.nmap 192.168.1.27
+Nmap scan report for 192.168.1.27 (192.168.1.27)
+Host is up (0.000056s latency).
+Not shown: 65531 closed tcp ports (conn-refused)
+PORT      STATE SERVICE
+22/tcp    open  ssh
+80/tcp    open  http
+111/tcp   open  rpcbind
+51903/tcp open  unknown
+
+# Nmap done at Sat Oct  1 21:38:03 2022 -- 1 IP address (1 host up) scanned in 0.64 seconds
